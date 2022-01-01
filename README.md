@@ -1,2 +1,3 @@
-# FInal-Group-Project-OOP-
+#  №1 Ala-too University Schedule
+
 Made by Avgustin Chynarbekov Erkhan Adenov
