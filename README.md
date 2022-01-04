@@ -1,3 +1,3 @@
-#  №1 Ala-too University Schedule
-
-Made by Avgustin Chynarbekov Erkhan Adenov
+#  Anime Review APP 
+# JavaFX Scene Builder MySQL
+# Made by Avgustin Chynarbekov Erkhan Adenov
