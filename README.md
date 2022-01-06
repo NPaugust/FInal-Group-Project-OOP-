@@ -1,5 +1,5 @@
-# Anime-Movie-Review Management.
-# JavaFX MySQL
+# Anime-Movie-Review Management
+
 This is application for managing the ratings of films.
 For the sake of interest to find out what ratings other people gave and how much they coincide with yours. 
 
