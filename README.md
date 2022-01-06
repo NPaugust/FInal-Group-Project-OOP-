@@ -13,6 +13,7 @@ For the sake of interest to find out what ratings other people gave and how much
 
 # Presentation video on [YouTube](https://www.youtube.com/watch?v=iIzE9gGng40)
 
+# Power Point Presentation [Presentation](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7824670/Final-OOP-Project.Presentation.pdf)
 
  
 # Feedbacks
