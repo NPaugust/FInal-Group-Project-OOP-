@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
+
 import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
@@ -23,7 +24,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class ratingController implements Initializable{
+public class ratingController implements Initializable {
     @FXML
     private Button closeButton;
     @FXML
@@ -39,7 +40,7 @@ public class ratingController implements Initializable{
     @FXML
     private Button updateButton;
 
-    //All user review table
+
     @FXML
     private TableView<userReviewTable> reviewTable;
     @FXML
@@ -53,7 +54,7 @@ public class ratingController implements Initializable{
 
     ObservableList<userReviewTable> revlist = FXCollections.observableArrayList();
 
-    //User's personal review and rating table
+
     @FXML
     private TableView<userReviewTable> personalTable;
     @FXML
@@ -73,17 +74,16 @@ public class ratingController implements Initializable{
         setAverage();
     }
 
-    //Get movieid (PK, FK)
-    public Integer setMovieid(Integer movieid){
+
+    public Integer setMovieid(Integer movieid) {
         return movieid;
     }
 
-    //Get username (PK, FK)
-    public String setUsername(String username){
+    public String setUsername(String username) {
         return username;
     }
 
-    //Display average of user's rating
+
     private void setAverage() {
         String query = "SELECT CAST(AVG(userRating) AS decimal (4,2)) AS average FROM review WHERE review.movieid = " + setMovieid(movielistController.getInstance().movieid());
         try {
@@ -91,7 +91,7 @@ public class ratingController implements Initializable{
             Connection connectDB = connectNow.getConnection();
             ResultSet result = connectDB.createStatement().executeQuery(query);
 
-            while(result.next()) {
+            while (result.next()) {
                 rating.setText(result.getString("average"));
             }
 
@@ -101,11 +101,11 @@ public class ratingController implements Initializable{
 
     }
 
-    //Display all user review and rating
+
     public void populateTableView() {
         try {
             revlist = FXCollections.observableArrayList();
-            String query = "SELECT review.username, userReview, userRating FROM review INNER JOIN member ON member.username = review.username WHERE review.movieid = "+ setMovieid(movielistController.getInstance().movieid());
+            String query = "SELECT review.username, userReview, userRating FROM review INNER JOIN member ON member.username = review.username WHERE review.movieid = " + setMovieid(movielistController.getInstance().movieid());
 
             DatabaseConnection connectNow = new DatabaseConnection();
             Connection connectDB = connectNow.getConnection();
@@ -130,7 +130,7 @@ public class ratingController implements Initializable{
         }
     }
 
-    //Display user's personal review and rating table
+
     private void populatePersonalTableView() {
         try {
             revlist = FXCollections.observableArrayList();
@@ -156,15 +156,15 @@ public class ratingController implements Initializable{
         }
     }
 
-    //Close button
+
     public void closeButtonOnAction(ActionEvent event) {
-            Stage stage = (Stage) closeButton.getScene().getWindow();
-            backToMovielist();
-            stage.close();
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        backToMovielist();
+        stage.close();
     }
 
-    //Save button
-    public void saveButtonOnAction(ActionEvent event){
+
+    public void saveButtonOnAction(ActionEvent event) {
         if (reviewTextArea.getText().isBlank() == false && rateTextField.getText().isBlank() == false) {
             Stage stage = (Stage) saveButton.getScene().getWindow();
             saveReview();
@@ -174,7 +174,6 @@ public class ratingController implements Initializable{
         }
     }
 
-    //Update button
     public void updateButtonOnAction(ActionEvent event) {
         if (reviewTextArea.getText().isBlank() == false && rateTextField.getText().isBlank() == false) {
             Stage stage = (Stage) updateButton.getScene().getWindow();
@@ -185,23 +184,21 @@ public class ratingController implements Initializable{
         }
     }
 
-    //Close button -> go back to movie list
-    public void backToMovielist(){
-        try{
+    public void backToMovielist() {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("movielist.fxml"));
             Stage movielistStage = new Stage();
             movielistStage.initStyle(StageStyle.UNDECORATED);
             movielistStage.setScene(new Scene(root, 600, 400));
             movielistStage.show();
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
     }
 
-    //Save button -> save review and rating to database
-    public void saveReview(){
+    public void saveReview() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
@@ -209,10 +206,10 @@ public class ratingController implements Initializable{
         String userRating = rateTextField.getText();
 
         String insertFields = "INSERT INTO review (review.movieid, review.username, userReview, userRating) VALUES (";
-        String insertValues = setMovieid(movielistController.getInstance().movieid()) + ",'" + setUsername(loginController.getInstance().username()) + "','" +userReview + "','" + userRating + "')";
+        String insertValues = setMovieid(movielistController.getInstance().movieid()) + ",'" + setUsername(loginController.getInstance().username()) + "','" + userReview + "','" + userRating + "')";
         String insertToRegister = insertFields + insertValues;
 
-        try{
+        try {
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(insertToRegister);
             reviewMessage.setText("Review successfully posted!");
@@ -223,7 +220,6 @@ public class ratingController implements Initializable{
         }
     }
 
-    //Update button -> update the database with new inputted value
     public void updateReview() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
@@ -234,8 +230,7 @@ public class ratingController implements Initializable{
         String insertFields = "UPDATE review SET userReview ='" + userReview + "', userRating =" + userRating;
         String insertValues = "WHERE username = '" + setUsername(loginController.getInstance().username()) + "' AND movieid= " + setMovieid(movielistController.getInstance().movieid());
         String insertToRegister = insertFields + insertValues;
-        //UPDATE review SET userReview = 'very cool ogre', userRating = 6.9 WHERE movieid = 2 AND username = 'jeff';
-        try{
+        try {
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(insertToRegister);
             reviewMessage.setText("Review successfully updated!");

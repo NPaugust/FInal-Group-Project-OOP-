@@ -8,60 +8,48 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-            prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.registerController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.registerController">
     <top>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #435862;"
-                    BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #435862;" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="152.0" layoutY="39.0" text="Register" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="24.0"/>
+                        <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
                 <Label layoutX="136.0" layoutY="111.0" text="FirstName" textFill="WHITE">
                     <font>
-                        <Font size="14.0"/>
+                        <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="firstnameTextField" layoutX="225.0" layoutY="108.0"
-                           style="-fx-background-radius: 90;"/>
+                <TextField fx:id="firstnameTextField" layoutX="225.0" layoutY="108.0" style="-fx-background-radius: 90;" />
                 <Label layoutX="137.0" layoutY="163.0" text="LastName" textFill="WHITE">
                     <font>
-                        <Font size="14.0"/>
+                        <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="lastnameTextField" layoutX="225.0" layoutY="160.0"
-                           style="-fx-background-radius: 90;"/>
+                <TextField fx:id="lastnameTextField" layoutX="225.0" layoutY="160.0" style="-fx-background-radius: 90;" />
             </children>
         </AnchorPane>
     </top>
     <bottom>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #435862;"
-                    BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #435862;" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="134.0" layoutY="17.0" text="Username" textFill="WHITE">
                     <font>
-                        <Font size="14.0"/>
+                        <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="usernameTextField" layoutX="221.0" layoutY="14.0" style="-fx-background-radius: 90;"/>
+                <TextField fx:id="usernameTextField" layoutX="221.0" layoutY="14.0" style="-fx-background-radius: 90;" />
                 <Label layoutX="134.0" layoutY="69.0" text="password" textFill="WHITE">
                     <font>
-                        <Font size="14.0"/>
+                        <Font size="14.0" />
                     </font>
                 </Label>
-                <Button fx:id="loginButton" layoutX="444.0" layoutY="143.0" mnemonicParsing="false"
-                        onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="123.0"
-                        style="-fx-background-radius: 90;" text="Login"/>
-                <Button fx:id="registerButton" layoutX="306.0" layoutY="143.0" mnemonicParsing="false"
-                        onAction="#registerButtonOnAction" prefHeight="30.0" prefWidth="123.0"
-                        style="-fx-background-radius: 90;" text="Register"/>
-                <PasswordField fx:id="passwordTextField" layoutX="221.0" layoutY="66.0"
-                               style="-fx-background-radius: 90;"/>
-                <Label fx:id="registerMessage" layoutX="44.0" layoutY="119.0" prefHeight="18.0" prefWidth="262.0"
-                       textFill="#1eff00"/>
+                <Button fx:id="loginButton" layoutX="444.0" layoutY="143.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-radius: 90;" text="Login" />
+                <Button fx:id="registerButton" layoutX="306.0" layoutY="143.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-radius: 90;" text="Register" />
+                <PasswordField fx:id="passwordTextField" layoutX="221.0" layoutY="66.0" style="-fx-background-radius: 90;" />
+                <Label fx:id="registerMessage" layoutX="44.0" layoutY="119.0" prefHeight="18.0" prefWidth="262.0" textFill="#1eff00" />
             </children>
         </AnchorPane>
     </bottom>

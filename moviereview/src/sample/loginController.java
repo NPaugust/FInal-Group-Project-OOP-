@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -31,21 +32,22 @@ public class loginController {
 
 
     private static loginController instance;
-    public loginController(){
+
+    public loginController() {
         instance = this;
     }
 
-    public static loginController getInstance(){
+    public static loginController getInstance() {
         return instance;
     }
 
-    public String username(){
+    public String username() {
         return usernameTextField.getText();
     }
 
 
     public void loginButtonOnAction(ActionEvent event) {
-        if (usernameTextField.getText().isBlank() == false && passwordTextField.getText().isBlank()== false) {
+        if (usernameTextField.getText().isBlank() == false && passwordTextField.getText().isBlank() == false) {
             Stage stage = (Stage) loginButton.getScene().getWindow();
             validateLogin();
             stage.close();
@@ -55,27 +57,27 @@ public class loginController {
         }
     }
 
-
-    public void registerButtonOnAction(ActionEvent event){
+    public void registerButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) registerButton.getScene().getWindow();
         createAccountForm();
         stage.close();
     }
 
 
-    public void validateLogin(){
+    public void validateLogin() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String verifyLogin = "SELECT count(1) FROM member WHERE username = '" + usernameTextField.getText() + "' AND password ='" + passwordTextField.getText() + "'" ;
+        String verifyLogin = "SELECT count(1) FROM member WHERE username = '"
+                + usernameTextField.getText() + "' AND password ='" + passwordTextField.getText() + "'";
 
         try {
             Statement statement = connectDB.createStatement();
             ResultSet queryResult = statement.executeQuery(verifyLogin);
 
-            while(queryResult.next()){
+            while (queryResult.next()) {
 
-                if(queryResult.getInt(1) == 1){
+                if (queryResult.getInt(1) == 1) {
 
                     goToMovielist();
                 } else {
@@ -90,30 +92,30 @@ public class loginController {
     }
 
 
-    public void createAccountForm(){
-        try{
+    public void createAccountForm() {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
             Stage registerStage = new Stage();
             registerStage.initStyle(StageStyle.UNDECORATED);
             registerStage.setScene(new Scene(root, 600, 400));
             registerStage.show();
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
     }
 
 
-    public void goToMovielist(){
-        try{
+    public void goToMovielist() {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("movielist.fxml"));
             Stage movielistStage = new Stage();
             movielistStage.initStyle(StageStyle.UNDECORATED);
             movielistStage.setScene(new Scene(root, 600, 400));
             movielistStage.show();
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }

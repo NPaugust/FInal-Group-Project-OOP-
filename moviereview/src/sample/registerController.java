@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
 import java.sql.Connection;
 import java.sql.Statement;
 
@@ -32,15 +33,15 @@ public class registerController {
     @FXML
     private TextField usernameTextField;
 
-    public void loginButtonOnAction(ActionEvent event){
+    public void loginButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) loginButton.getScene().getWindow();
         backToLogin();
         stage.close();
     }
 
 
-    public void registerButtonOnAction(ActionEvent event){
-        if (firstnameTextField.getText().isBlank() == false && lastnameTextField.getText().isBlank() == false && usernameTextField.getText().isBlank() == false && passwordTextField.getText().isBlank()== false) {
+    public void registerButtonOnAction(ActionEvent event) {
+        if (firstnameTextField.getText().isBlank() == false && lastnameTextField.getText().isBlank() == false && usernameTextField.getText().isBlank() == false && passwordTextField.getText().isBlank() == false) {
             Stage stage = (Stage) registerButton.getScene().getWindow();
             registerUser();
         } else {
@@ -49,7 +50,7 @@ public class registerController {
         }
     }
 
-    public void registerUser(){
+    public void registerUser() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
@@ -62,7 +63,7 @@ public class registerController {
         String insertValues = firstname + "','" + lastname + "','" + username + "','" + password + "')";
         String insertToRegister = insertFields + insertValues;
 
-        try{
+        try {
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(insertToRegister);
             registerMessage.setText("User has been registered successfully!");
@@ -75,14 +76,14 @@ public class registerController {
     }
 
     public void backToLogin() {
-        try{
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.UNDECORATED);
             loginStage.setScene(new Scene(root, 600, 400));
             loginStage.show();
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }

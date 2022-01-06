@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -35,18 +36,19 @@ public class movielistController implements Initializable {
 
     private ObservableList<tableModel> list;
 
-    //Class instance to get movieid value
+
     private static movielistController instance;
 
-    public movielistController(){
+    public movielistController() {
         instance = this;
     }
 
-    public Integer movieid (){
+    public Integer movieid() {
         tableModel tableModel = table.getSelectionModel().getSelectedItem();
         return tableModel.getMovieid();
     }
-    public static movielistController getInstance(){
+
+    public static movielistController getInstance() {
         return instance;
     }
 
@@ -55,7 +57,7 @@ public class movielistController implements Initializable {
         populateTableView();
     }
 
-    //Display movie list table
+
     private void populateTableView() {
         try {
             list = FXCollections.observableArrayList();
@@ -83,29 +85,28 @@ public class movielistController implements Initializable {
         }
     }
 
-    //Rate button
-    public void rateButtonOnAction (ActionEvent event){
+
+    public void rateButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) rateButton.getScene().getWindow();
         goToRating();
         stage.close();
     }
 
-    //Rate button -> go to rating page
-    public void goToRating(){
-        try{
+
+    public void goToRating() {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("rating.fxml"));
             Stage ratingStage = new Stage();
             ratingStage.initStyle(StageStyle.UNDECORATED);
             ratingStage.setScene(new Scene(root, 800, 750));
             ratingStage.show();
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
     }
 
-    //Specify which movieid
     public Integer clickColumn(MouseEvent event) {
         tableModel tableModel = table.getSelectionModel().getSelectedItem();
         return tableModel.getMovieid();
