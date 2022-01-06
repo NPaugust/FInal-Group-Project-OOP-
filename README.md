@@ -17,4 +17,5 @@ This is application for managing the ratings of films.For the sake of interest t
 - MySQL 
 - Workbench (8.0.2)
 
-# Contributors are: Avgustine Chynarbekov Adenov Erkhan
+# Contributors
+Avgustine Chynarbekov Adenov Erkhan
