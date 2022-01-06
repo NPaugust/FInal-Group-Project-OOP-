@@ -19,6 +19,7 @@ For the sake of interest to find out what ratings other people gave and how much
 - JavaFX 17.0.2 
 - Scene Builder
 - MySQL 
+- mysql.connector.8.0.2
 - Workbench (8.0.2)
 
 # Contributors
