@@ -27,5 +27,5 @@ For the sake of interest to find out what ratings other people gave and how much
 - mysql.connector.8.0.2
 - Workbench (8.0.2)
 
-# Made by
+# Contributors 
 Avgustine Chynarbekov Adenov Erkhan
