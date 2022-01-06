@@ -16,7 +16,8 @@ For the sake of interest to find out what ratings other people gave and how much
 # Power Point Presentation [Presentation](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7824670/Final-OOP-Project.Presentation.pdf)
 
  
-# Feedbacks
+# Feedbacks By dungeon masters [Text Feedbacks](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7824783/Feedbacks-Final-OOP.pptx)
+
 
 # Used:
 - JavaFX 17.0.2 
@@ -25,5 +26,5 @@ For the sake of interest to find out what ratings other people gave and how much
 - mysql.connector.8.0.2
 - Workbench (8.0.2)
 
-# Contributors
+# Made by
 Avgustine Chynarbekov Adenov Erkhan
