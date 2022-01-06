@@ -11,7 +11,8 @@ For the sake of interest to find out what ratings other people gave and how much
 
 ![animelist](https://github.com/NPaugust/FInal-Group-Project-OOP-/blob/main/screenshots/animelist.png)
 
-# Contribution guides [guide 1](https://www.youtube.com/watch?v=HBBtlwGpBek)
+# Contribution guides 
+[guide 1](https://www.youtube.com/watch?v=HBBtlwGpBek)
 [guide 2](https://www.youtube.com/watch?v=e8g9eNnFpHQ)
 # Presentation video on [YouTube](https://www.youtube.com/watch?v=iIzE9gGng40)
 
