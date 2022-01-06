@@ -16,7 +16,7 @@ For the sake of interest to find out what ratings other people gave and how much
 
 # Feedbacks By dungeon masters [Text Feedbacks](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7824783/Feedbacks-Final-OOP.pptx)
 
-# Contribution guides        [JavaFX](https://www.youtube.com/watch?v=HBBtlwGpBek)  [JDBC](https://www.youtube.com/watch?v=e8g9eNnFpHQ)
+# Contribution guides [JavaFX](https://www.youtube.com/watch?v=HBBtlwGpBek)  [JDBC](https://www.youtube.com/watch?v=e8g9eNnFpHQ)
 
 # Used:
 - JavaFX 17.0.2 
