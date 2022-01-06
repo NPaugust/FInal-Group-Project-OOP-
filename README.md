@@ -28,5 +28,5 @@ For the sake of interest to find out what ratings other people gave and how much
 - Workbench (8.0.2)
 
 # Contributors 
-[Avgustine Chynarbekov](https://github.com/NPaugust)
-[Adenov Erkhan](https://github.com/GalliFrey7)
+# [Avgustine Chynarbekov](https://github.com/NPaugust)
+# [Adenov Erkhan](https://github.com/GalliFrey7)
