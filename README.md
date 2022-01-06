@@ -1,6 +1,6 @@
 # Anime-Movie-Review Management.
 
-The Application for managing movie ratings.
+This is application for managing the ratings of films.For the sake of interest to find out what ratings other people gave and how much they coincide with yours. 
 
 
 # Pictures
@@ -13,7 +13,7 @@ The Application for managing movie ratings.
  
 # Used:
 - JavaFX 
-- Scene 
-- Builder MySQL
+- Scene Builder
+- MySQL
 - 
-# Made by Avgustin Chynarbekov Erkhan Adenov
+# 
