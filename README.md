@@ -12,8 +12,9 @@ This is application for managing the ratings of films.For the sake of interest t
 
  
 # Used:
-- JavaFX 
+- JavaFX 17.0.2 
 - Scene Builder
-- MySQL
-- 
-# 
+- MySQL 
+- Workbench (8.0.2)
+
+# Contributors are: Avgustine Chynarbekov Adenov Erkhan
