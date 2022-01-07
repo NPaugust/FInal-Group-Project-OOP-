@@ -14,7 +14,8 @@ For the sake of interest to find out what ratings other people gave and how much
 
 # Power Point Presentation [Presentation](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7824670/Final-OOP-Project.Presentation.pdf)
 
-# Feedbacks By dungeon masters [Text Feedbacks](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7824783/Feedbacks-Final-OOP.pptx)
+# Feedbacks By dungeon masters [Text Feedbacks](https://github.com/NPaugust/FInal-Group-Project-OOP-/files/7828464/Feedbacks-Final-OOP.pptx)
+)
 
 # Contribution guides: [JavaFX](https://www.youtube.com/watch?v=HBBtlwGpBek)  [JDBC](https://www.youtube.com/watch?v=e8g9eNnFpHQ)
 
