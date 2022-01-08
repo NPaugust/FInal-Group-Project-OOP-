@@ -28,7 +28,15 @@ For the sake of interest to find out what ratings other people gave and how much
 - Workbench (8.0.2)
 
 # Contributors 
-[Avgustine Chynarbekov](https://github.com/NPaugust)
 
+<a href="https://github.com/NPaugust/FInal-Group-Project-OOP-/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo= NPaugust/FInal-Group-Project-OOP-" />
+</a>
+
+<a href="https://github.com/GalliFrey7/web-Ghibli/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GalliFrey7/web-Ghibli" />
+</a>
+
+[Avgustine Chynarbekov](https://github.com/NPaugust)
 
 [Adenov Erkhan](https://github.com/GalliFrey7)
